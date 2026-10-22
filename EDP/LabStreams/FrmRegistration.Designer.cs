@@ -51,6 +51,7 @@
             label13 = new Label();
             btnRegister = new Button();
             cbGender = new ComboBox();
+            btnRecords = new Button();
             SuspendLayout();
             // 
             // label1
@@ -76,7 +77,7 @@
             cbProgram.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbProgram.FormattingEnabled = true;
             cbProgram.Items.AddRange(new object[] { "BS Information Technology", "BS Computer Science", "BS Business Administration", "BS Computer Engineering", "BS Criminology", "BS Tourism Management", "BS Hospitality Management" });
-            cbProgram.Location = new Point(412, 92);
+            cbProgram.Location = new Point(310, 92);
             cbProgram.Name = "cbProgram";
             cbProgram.Size = new Size(276, 29);
             cbProgram.TabIndex = 3;
@@ -104,14 +105,14 @@
             label3.BackColor = Color.Black;
             label3.Location = new Point(12, 56);
             label3.Name = "label3";
-            label3.Size = new Size(716, 3);
+            label3.Size = new Size(716, 2);
             label3.TabIndex = 6;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(412, 68);
+            label5.Location = new Point(310, 68);
             label5.Name = "label5";
             label5.Size = new Size(69, 20);
             label5.TabIndex = 25;
@@ -270,11 +271,23 @@
             cbGender.Size = new Size(276, 29);
             cbGender.TabIndex = 43;
             // 
+            // btnRecords
+            // 
+            btnRecords.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRecords.Location = new Point(622, 19);
+            btnRecords.Name = "btnRecords";
+            btnRecords.Size = new Size(100, 30);
+            btnRecords.TabIndex = 44;
+            btnRecords.Text = "Records";
+            btnRecords.UseVisualStyleBackColor = true;
+            btnRecords.Click += btnRecords_Click;
+            // 
             // FrmRegistration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(740, 366);
+            Controls.Add(btnRecords);
             Controls.Add(cbGender);
             Controls.Add(btnRegister);
             Controls.Add(label13);
@@ -330,5 +343,6 @@
         private Label label13;
         private Button btnRegister;
         private ComboBox cbGender;
+        private Button btnRecords;
     }
 }

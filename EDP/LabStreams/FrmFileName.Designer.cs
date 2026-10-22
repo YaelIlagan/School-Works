@@ -36,7 +36,7 @@
             // txtFileName
             // 
             txtFileName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtFileName.Location = new Point(12, 48);
+            txtFileName.Location = new Point(12, 42);
             txtFileName.Name = "txtFileName";
             txtFileName.Size = new Size(244, 29);
             txtFileName.TabIndex = 0;
@@ -46,7 +46,7 @@
             label1.AutoSize = true;
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 21);
+            label1.Location = new Point(12, 15);
             label1.Name = "label1";
             label1.Size = new Size(128, 21);
             label1.TabIndex = 1;
@@ -59,7 +59,7 @@
             btnSetFileName.FlatStyle = FlatStyle.Flat;
             btnSetFileName.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSetFileName.ForeColor = Color.White;
-            btnSetFileName.Location = new Point(80, 87);
+            btnSetFileName.Location = new Point(80, 81);
             btnSetFileName.Name = "btnSetFileName";
             btnSetFileName.Size = new Size(109, 29);
             btnSetFileName.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(268, 140);
+            ClientSize = new Size(268, 128);
             Controls.Add(btnSetFileName);
             Controls.Add(label1);
             Controls.Add(txtFileName);

@@ -35,10 +35,10 @@
             // txtInput
             // 
             txtInput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtInput.Location = new Point(12, 31);
+            txtInput.Location = new Point(12, 12);
             txtInput.Multiline = true;
             txtInput.Name = "txtInput";
-            txtInput.Size = new Size(244, 68);
+            txtInput.Size = new Size(244, 87);
             txtInput.TabIndex = 0;
             // 
             // btnCreate
