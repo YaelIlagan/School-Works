@@ -47,7 +47,7 @@
             btnOpen.BackColor = Color.DodgerBlue;
             btnOpen.FlatAppearance.BorderColor = Color.Silver;
             btnOpen.FlatStyle = FlatStyle.Flat;
-            btnOpen.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnOpen.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnOpen.ForeColor = Color.White;
             btnOpen.Location = new Point(118, 218);
             btnOpen.Name = "btnOpen";
