@@ -108,7 +108,7 @@
             // label3
             // 
             label3.BackColor = Color.Black;
-            label3.Location = new Point(8, 36);
+            label3.Location = new Point(8, 37);
             label3.Name = "label3";
             label3.Size = new Size(318, 1);
             label3.TabIndex = 6;
@@ -128,10 +128,10 @@
             // 
             lblTotal.AutoSize = true;
             lblTotal.BackColor = Color.Transparent;
-            lblTotal.Font = new Font("AMORIA", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotal.Location = new Point(0, 26);
+            lblTotal.Font = new Font("Segoe UI Black", 42.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotal.Location = new Point(0, 24);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(255, 69);
+            lblTotal.Size = new Size(202, 76);
             lblTotal.TabIndex = 1;
             lblTotal.Text = "00000";
             // 

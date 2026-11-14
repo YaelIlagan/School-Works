@@ -11,54 +11,61 @@ namespace BasicCalculator
 
         private void btnCompute_Click(object sender, EventArgs e)
         {
-            
+
 
             try
             {
-
-                if (!float.TryParse(txtnum1.Text, out float num1))
+                if (!float.TryParse(txtnum1.Text, out float a))
                 {
-                    MessageBox.Show("Please input a valid first number.", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Input a valid first number.", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtnum1.Focus();
                     return;
                 }
 
-                if (!float.TryParse(txtnum2.Text, out float num2))
+                if (!float.TryParse(txtnum2.Text, out float b))
                 {
-                    MessageBox.Show("Please input a valid second number.", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Input a valid second number.", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtnum2.Focus();
                     return;
                 }
 
-               
-
-                switch (cbOperator.SelectedItem.ToString())
+                if (cbOperator.SelectedItem is not string operatorText)
                 {
+                    MessageBox.Show("Please select an operator.", "Missing operator", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cbOperator.Focus();
+                    return;
+                }
 
+                if (operatorText == "/" && b == 0)
+                {
+                    MessageBox.Show("Cant divide by 0.", "Invalid operation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtnum2.Focus();
+                    return;
+                }
+
+                float result;
+
+                switch (operatorText)
+                {
                     case "+":
-                        lblTotal.Text = BasicComputation.add(num1, num2).ToString();
+                        result = BasicComputation.add(a, b);
                         break;
                     case "-":
-                        lblTotal.Text = BasicComputation.subtract(num1, num2).ToString();
+                        result = BasicComputation.subtract(a, b);
                         break;
                     case "*":
-                        lblTotal.Text = BasicComputation.multiply(num1, num2).ToString();
+                        result = BasicComputation.multiply(a, b);
                         break;
                     case "/":
-                        try
-                        {
-                            lblTotal.Text = BasicComputation.divide(num1, num2).ToString();
-                        }
-                        catch (DivideByZeroException ex)
-                        {
-                            MessageBox.Show("Please input a valid Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        result = BasicComputation.divide(a, b);
                         break;
                     default:
-                        MessageBox.Show("Please select a operator.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        break;
-
+                        MessageBox.Show("Please select a valid operator.", "Invalid operator", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        cbOperator.Focus();
+                        return;
                 }
+
+                lblTotal.Text = result.ToString();
             }
             catch (Exception ex)
             {
